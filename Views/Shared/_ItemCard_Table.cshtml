@@ -1,0 +1,9 @@
+﻿@model Item
+
+<tr>
+    <td>@Model.Id</td>
+    <td><a asp-controller="Item" asp-action="Details" asp-route-id="@Model.Id">@Model.Name</a></td>
+    <td>@Model.Price.ToString("0.0 NOK")</td>
+    <td>@Model.Description</td>
+</tr>
+
