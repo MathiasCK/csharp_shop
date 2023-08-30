@@ -11,8 +11,27 @@ namespace MyShop.Controllers
 {
     public class ItemController : Controller
     {
-        
+
+        public IActionResult Grid()
+        {
+            var items = GetItems();
+
+            ViewBag.CurrentViewName = "Grid";
+
+            return View(items);
+        }
+
+
         public IActionResult Table()
+        {
+            var items = GetItems();
+
+            ViewBag.CurrentViewName = "Table";
+
+            return View(items);
+        }
+
+        public List<Item> GetItems()
         {
             var items = new List<Item>();
 
@@ -20,14 +39,34 @@ namespace MyShop.Controllers
             {
                 Id = 1,
                 Name = "Pizza",
-                Price = 60
+                Price = 60,
+                Description = "Desc",
+                ImageUrl = "/images/pizza.jpg"
+            };
+
+            var item2 = new Item
+            {
+                Id = 2,
+                Name = "Tacos",
+                Price = 80,
+                Description = "Desc",
+                ImageUrl = "/images/tacos.jpg"
+            };
+
+            var item3 = new Item
+            {
+                Id = 3,
+                Name = "Coke",
+                Price = 20,
+                Description = "Desc",
+                ImageUrl = "/images/coke.jpg"
             };
 
             items.Add(item1);
+            items.Add(item2);
+            items.Add(item3);
 
-            ViewBag.CurrentViewName = "Items in cart";
-
-            return View(items);
+            return items;
         }
     }
 }
