@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/scopedcss/projectbundle/MyShop.bundle.scp.css",
+      "PackagePath": "staticwebassets/MyShop.bundle.scp.css"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.MyShop.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.MyShop.props",
+      "PackagePath": "build\\MyShop.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.MyShop.props",
+      "PackagePath": "buildMultiTargeting\\MyShop.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.MyShop.props",
+      "PackagePath": "buildTransitive\\MyShop.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

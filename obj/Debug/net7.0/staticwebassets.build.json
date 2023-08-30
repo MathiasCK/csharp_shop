@@ -1,0 +1,46 @@
+{
+  "Version": 1,
+  "Hash": "UxF4UPbkIt5ar/LQdIik7rsbR3SRaymrrGMQBgg0AHg=",
+  "Source": "MyShop",
+  "BasePath": "_content/MyShop",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [
+    {
+      "Identity": "/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/scopedcss/bundle/MyShop.styles.css",
+      "SourceId": "MyShop",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/scopedcss/bundle/",
+      "BasePath": "_content/MyShop",
+      "RelativePath": "MyShop.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/scopedcss/bundle/MyShop.styles.css"
+    },
+    {
+      "Identity": "/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/scopedcss/projectbundle/MyShop.bundle.scp.css",
+      "SourceId": "MyShop",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/scopedcss/projectbundle/",
+      "BasePath": "_content/MyShop",
+      "RelativePath": "MyShop.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/scopedcss/projectbundle/MyShop.bundle.scp.css"
+    }
+  ]
+}
