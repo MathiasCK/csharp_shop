@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MyShop.Models;
+using MyShop.ViewModels;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -15,20 +16,18 @@ namespace MyShop.Controllers
         public IActionResult Grid()
         {
             var items = GetItems();
+            var itemListViewModel = new ItemListViewModel(items, "Grid");
 
-            ViewBag.CurrentViewName = "Grid";
-
-            return View(items);
+            return View(itemListViewModel);
         }
 
 
         public IActionResult Table()
         {
             var items = GetItems();
+            var itemListViewModel = new ItemListViewModel(items, "Items");
 
-            ViewBag.CurrentViewName = "Table";
-
-            return View(items);
+            return View(itemListViewModel);
         }
 
         public List<Item> GetItems()

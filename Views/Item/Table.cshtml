@@ -1,6 +1,6 @@
-﻿@model IEnumerable<MyShop.Models.Item>
+﻿@model ItemListViewModel
 
-<h1>List of shop items (@ViewBag.CurrentViewName) View</h1>
+<h1>List of shop items (@Model.CurrentViewName) View</h1>
 <a href="/Item/Grid">Grid View</a>
 
 <div class="container">
@@ -11,7 +11,7 @@
             <th>Name</th>
             <th>Price</th>
             <th>Description</th>
-            @foreach (var item in Model)
+            @foreach (var item in Model.Items)
             {
             <tr>
                 <td>@item.Id</td>
