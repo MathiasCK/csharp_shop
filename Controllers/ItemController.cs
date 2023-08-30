@@ -30,6 +30,18 @@ namespace MyShop.Controllers
             return View(itemListViewModel);
         }
 
+        public IActionResult Details(int id)
+        {
+            var items = GetItems();
+            var item = items.FirstOrDefault(i => i.Id == id);
+
+            if (item == null)
+            {
+                return NotFound();
+            }
+            return View(item);
+        }
+
         public List<Item> GetItems()
         {
             var items = new List<Item>();

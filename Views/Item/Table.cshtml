@@ -15,7 +15,7 @@
             {
             <tr>
                 <td>@item.Id</td>
-                <td>@item.Name</td>
+                <td><a asp-controller="Item" asp-action="Details" asp-route-id="@item.Id">@item.Name</a></td>
                 <td>@item.Price.ToString("0.0 NOK")</td>
                 <td>@item.Description</td>
             </tr>
