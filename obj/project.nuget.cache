@@ -1,15 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "nwY9oWishpuBWpjLuSpEogSa6Eeay3SeqT5Ej+/VSUzUaZQDBe+OLzm15EpvYIvfTZIDscL4EEaA8BZNsfwEIA==",
+  "dgSpecHash": "CU2iY9KOubfRYZoK56QA2ksQGiVp+qKuRUBsOHdxCkoAZQRqgup9PQtAjrnOJWu2przKALAfEL/XbWopYE8qKQ==",
   "success": true,
   "projectFilePath": "/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/MyShop.csproj",
   "expectedPackageFiles": [
+    "/Users/mathiaskolberg/.nuget/packages/castle.core/5.1.0/castle.core.5.1.0.nupkg.sha512",
     "/Users/mathiaskolberg/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/mathiaskolberg/.nuget/packages/microsoft.data.sqlite.core/7.0.10/microsoft.data.sqlite.core.7.0.10.nupkg.sha512",
     "/Users/mathiaskolberg/.nuget/packages/microsoft.entityframeworkcore/7.0.10/microsoft.entityframeworkcore.7.0.10.nupkg.sha512",
     "/Users/mathiaskolberg/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.10/microsoft.entityframeworkcore.abstractions.7.0.10.nupkg.sha512",
     "/Users/mathiaskolberg/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.10/microsoft.entityframeworkcore.analyzers.7.0.10.nupkg.sha512",
     "/Users/mathiaskolberg/.nuget/packages/microsoft.entityframeworkcore.design/7.0.10/microsoft.entityframeworkcore.design.7.0.10.nupkg.sha512",
+    "/Users/mathiaskolberg/.nuget/packages/microsoft.entityframeworkcore.proxies/7.0.10/microsoft.entityframeworkcore.proxies.7.0.10.nupkg.sha512",
     "/Users/mathiaskolberg/.nuget/packages/microsoft.entityframeworkcore.relational/7.0.10/microsoft.entityframeworkcore.relational.7.0.10.nupkg.sha512",
     "/Users/mathiaskolberg/.nuget/packages/microsoft.entityframeworkcore.sqlite/7.0.10/microsoft.entityframeworkcore.sqlite.7.0.10.nupkg.sha512",
     "/Users/mathiaskolberg/.nuget/packages/microsoft.entityframeworkcore.sqlite.core/7.0.10/microsoft.entityframeworkcore.sqlite.core.7.0.10.nupkg.sha512",
@@ -29,6 +31,7 @@
     "/Users/mathiaskolberg/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.4/sqlitepclraw.lib.e_sqlite3.2.1.4.nupkg.sha512",
     "/Users/mathiaskolberg/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.4/sqlitepclraw.provider.e_sqlite3.2.1.4.nupkg.sha512",
     "/Users/mathiaskolberg/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
+    "/Users/mathiaskolberg/.nuget/packages/system.diagnostics.eventlog/6.0.0/system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "/Users/mathiaskolberg/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
     "/Users/mathiaskolberg/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
     "/Users/mathiaskolberg/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512"
