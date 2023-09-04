@@ -1,4 +1,36 @@
 ﻿<Properties StartupConfiguration="{356E2A20-0C64-4031-BC11-77F6AFD2B2A5}|https">
-  <MonoDevelop.Ide.ItemProperties.MyShop FirstBuild="True" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MyShop PreferredExecutionTarget="/Applications/Arc.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Item/Grid.cshtml">
+    <Files>
+      <File FileName="Views/Item/Grid.cshtml" Line="11" Column="7" />
+      <File FileName="Views/Item/Table.cshtml" />
+      <File FileName="Views/Home/index.cshtml" />
+      <File FileName="Models/ItemDbContext.cs" />
+      <File FileName="Controllers/ItemController.cs" />
+      <File FileName="Program.cs" Line="26" Column="1" />
+      <File FileName="appsettings.json" />
+      <File FileName="Models/Item.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MyShop">
+            <Node name="MyShop">
+              <Node name="Views" expanded="True">
+                <Node name="Item" expanded="True">
+                  <Node name="Grid.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

@@ -13,8 +13,14 @@
             <th>Description</th>
             @foreach (var item in Model.Items)
             {
-            <partial name="_ItemCard_Table" model="item" />
-        }</tr>
-        </table>
-    </div>
+                <partial name="_ItemCard_Table" model="item" />
+            }
+        </tr>
+    </table>
+</div>
+<p>
+    <a class="btn btn-secondary" asp-controller="Item" asp-action="Create">
+        Create new item
+    </a>
+</p>
 
