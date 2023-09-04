@@ -20,6 +20,11 @@ namespace MyShop.Controllers
             _itemDbContext = itemDbContext;
         }
 
+        public List<Order> OrderConsole()
+        {
+            return _itemDbContext.Orders.ToList();
+        }
+
         public async Task<IActionResult> Grid()
         {
             var items = await _itemDbContext.Items.ToListAsync();
