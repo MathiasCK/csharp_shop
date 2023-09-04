@@ -1,6 +1,7 @@
 ﻿using MyShop.Models;
 using MyShop.DAL;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,10 @@ builder.Services.AddDbContext<ItemDbContext>(options => {
 });
 
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
+
+var loggerConfig = new LoggerConfiguration().MinimumLevel.Information().WriteTo.File($"logs/app_{DateTime.Now:yyyyMMdd_HHmmss}.log");
+var logger = loggerConfig.CreateLogger();
+builder.Logging.AddSerilog(logger);
 
 var app = builder.Build();
 
