@@ -73,3 +73,10 @@
 /Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.pdb
 /Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.genruntimeconfig.cache
 /Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/ref/MyShop.dll
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/bin/Debug/net7.0/Serilog.dll
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/bin/Debug/net7.0/Serilog.Extensions.Logging.dll
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/bin/Debug/net7.0/Serilog.Extensions.Logging.File.dll
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/bin/Debug/net7.0/Serilog.Formatting.Compact.dll
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/bin/Debug/net7.0/Serilog.Sinks.Async.dll
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/bin/Debug/net7.0/Serilog.Sinks.File.dll
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/bin/Debug/net7.0/Serilog.Sinks.RollingFile.dll

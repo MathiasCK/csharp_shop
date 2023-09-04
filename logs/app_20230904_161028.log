@@ -1,0 +1,179 @@
+2023-09-04 16:10:29.178 +02:00 [Information] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"type\" = 'table' AND \"rootpage\" IS NOT NULL;"
+2023-09-04 16:10:29.188 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA journal_mode = 'wal';"
+2023-09-04 16:10:29.223 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"Customers\" (
+    \"Id\" INTEGER NOT NULL CONSTRAINT \"PK_Customers\" PRIMARY KEY AUTOINCREMENT,
+    \"Name\" TEXT NOT NULL,
+    \"Address\" TEXT NOT NULL
+);"
+2023-09-04 16:10:29.223 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"Items\" (
+    \"Id\" INTEGER NOT NULL CONSTRAINT \"PK_Items\" PRIMARY KEY AUTOINCREMENT,
+    \"Name\" TEXT NOT NULL,
+    \"Price\" TEXT NOT NULL,
+    \"Description\" TEXT NULL,
+    \"ImageUrl\" TEXT NULL
+);"
+2023-09-04 16:10:29.224 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"Orders\" (
+    \"Id\" INTEGER NOT NULL CONSTRAINT \"PK_Orders\" PRIMARY KEY AUTOINCREMENT,
+    \"OrderDate\" TEXT NOT NULL,
+    \"CustomerId\" INTEGER NOT NULL,
+    \"TotalPrice\" TEXT NOT NULL,
+    CONSTRAINT \"FK_Orders_Customers_CustomerId\" FOREIGN KEY (\"CustomerId\") REFERENCES \"Customers\" (\"Id\") ON DELETE CASCADE
+);"
+2023-09-04 16:10:29.225 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"OrderItems\" (
+    \"Id\" INTEGER NOT NULL CONSTRAINT \"PK_OrderItems\" PRIMARY KEY AUTOINCREMENT,
+    \"ItemId\" INTEGER NOT NULL,
+    \"Quantity\" INTEGER NOT NULL,
+    \"OrderId\" INTEGER NOT NULL,
+    \"OrderItemPrice\" TEXT NOT NULL,
+    CONSTRAINT \"FK_OrderItems_Items_ItemId\" FOREIGN KEY (\"ItemId\") REFERENCES \"Items\" (\"Id\") ON DELETE CASCADE,
+    CONSTRAINT \"FK_OrderItems_Orders_OrderId\" FOREIGN KEY (\"OrderId\") REFERENCES \"Orders\" (\"Id\") ON DELETE CASCADE
+);"
+2023-09-04 16:10:29.225 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX \"IX_OrderItems_ItemId\" ON \"OrderItems\" (\"ItemId\");"
+2023-09-04 16:10:29.226 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX \"IX_OrderItems_OrderId\" ON \"OrderItems\" (\"OrderId\");"
+2023-09-04 16:10:29.226 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX \"IX_Orders_CustomerId\" ON \"Orders\" (\"CustomerId\");"
+2023-09-04 16:10:29.295 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"Items\" AS \"i\")"
+2023-09-04 16:10:29.349 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 96), @p1='?' (Size = 17), @p2='?' (Size = 5), @p3='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Items\" (\"Description\", \"ImageUrl\", \"Name\", \"Price\")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING \"Id\";"
+2023-09-04 16:10:29.354 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 108), @p1='?' (Size = 22), @p2='?' (Size = 17), @p3='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Items\" (\"Description\", \"ImageUrl\", \"Name\", \"Price\")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING \"Id\";"
+2023-09-04 16:10:29.354 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 103), @p1='?' (Size = 23), @p2='?' (Size = 12), @p3='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Items\" (\"Description\", \"ImageUrl\", \"Name\", \"Price\")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING \"Id\";"
+2023-09-04 16:10:29.355 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 84), @p1='?' (Size = 16), @p2='?' (Size = 12), @p3='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Items\" (\"Description\", \"ImageUrl\", \"Name\", \"Price\")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING \"Id\";"
+2023-09-04 16:10:29.356 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 126), @p1='?' (Size = 17), @p2='?' (Size = 5), @p3='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Items\" (\"Description\", \"ImageUrl\", \"Name\", \"Price\")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING \"Id\";"
+2023-09-04 16:10:29.356 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 97), @p1='?' (Size = 24), @p2='?' (Size = 14), @p3='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Items\" (\"Description\", \"ImageUrl\", \"Name\", \"Price\")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING \"Id\";"
+2023-09-04 16:10:29.357 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 92), @p1='?' (Size = 17), @p2='?' (Size = 5), @p3='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Items\" (\"Description\", \"ImageUrl\", \"Name\", \"Price\")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING \"Id\";"
+2023-09-04 16:10:29.357 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 71), @p1='?' (Size = 16), @p2='?' (Size = 4), @p3='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Items\" (\"Description\", \"ImageUrl\", \"Name\", \"Price\")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING \"Id\";"
+2023-09-04 16:10:29.361 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"Customers\" AS \"c\")"
+2023-09-04 16:10:29.366 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 11), @p1='?' (Size = 12)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Customers\" (\"Address\", \"Name\")
+VALUES (@p0, @p1)
+RETURNING \"Id\";"
+2023-09-04 16:10:29.367 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 14), @p1='?' (Size = 12)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Customers\" (\"Address\", \"Name\")
+VALUES (@p0, @p1)
+RETURNING \"Id\";"
+2023-09-04 16:10:29.369 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"Orders\" AS \"o\")"
+2023-09-04 16:10:29.379 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (Size = 20), @p2='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Orders\" (\"CustomerId\", \"OrderDate\", \"TotalPrice\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";"
+2023-09-04 16:10:29.380 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (Size = 20), @p2='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Orders\" (\"CustomerId\", \"OrderDate\", \"TotalPrice\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";"
+2023-09-04 16:10:29.381 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"OrderItems\" AS \"o\")"
+2023-09-04 16:10:29.387 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Decimal), @p3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"OrderItems\" (\"ItemId\", \"OrderId\", \"OrderItemPrice\", \"Quantity\")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING \"Id\";"
+2023-09-04 16:10:29.388 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Decimal), @p3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"OrderItems\" (\"ItemId\", \"OrderId\", \"OrderItemPrice\", \"Quantity\")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING \"Id\";"
+2023-09-04 16:10:29.389 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Decimal), @p3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"OrderItems\" (\"ItemId\", \"OrderId\", \"OrderItemPrice\", \"Quantity\")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING \"Id\";"
+2023-09-04 16:10:29.464 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"o\".\"Id\", \"o\".\"CustomerId\", \"o\".\"OrderDate\", \"o\".\"TotalPrice\", \"o0\".\"Id\", \"o0\".\"ItemId\", \"o0\".\"OrderId\", \"o0\".\"OrderItemPrice\", \"o0\".\"Quantity\"
+FROM \"Orders\" AS \"o\"
+LEFT JOIN \"OrderItems\" AS \"o0\" ON \"o\".\"Id\" = \"o0\".\"OrderId\"
+ORDER BY \"o\".\"Id\""
+2023-09-04 16:10:29.468 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@p1='?' (DbType = Int32), @p0='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"Orders\" SET \"TotalPrice\" = @p0
+WHERE \"Id\" = @p1
+RETURNING 1;"
+2023-09-04 16:10:29.468 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@p1='?' (DbType = Int32), @p0='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"Orders\" SET \"TotalPrice\" = @p0
+WHERE \"Id\" = @p1
+RETURNING 1;"
+2023-09-04 16:10:29.528 +02:00 [Information] User profile is available. Using '"/Users/mathiaskolberg/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2023-09-04 16:10:29.736 +02:00 [Information] Now listening on: "https://localhost:7162"
+2023-09-04 16:10:29.737 +02:00 [Information] Now listening on: "http://localhost:5230"
+2023-09-04 16:10:29.740 +02:00 [Information] Application started. Press Ctrl+C to shut down.
+2023-09-04 16:10:29.740 +02:00 [Information] Hosting environment: "Development"
+2023-09-04 16:10:29.741 +02:00 [Information] Content root path: "/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop"
+2023-09-04 16:10:30.870 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:7162/ - -
+2023-09-04 16:10:30.884 +02:00 [Information] Executing endpoint '"MyShop.Controllers.HomeController.Index (MyShop)"'
+2023-09-04 16:10:30.888 +02:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "MyShop.Controllers.HomeController" ("MyShop").
+2023-09-04 16:10:30.892 +02:00 [Information] Executing ViewResult, running view "Index".
+2023-09-04 16:10:30.917 +02:00 [Information] Executed ViewResult - view "Index" executed in 25.5093ms.
+2023-09-04 16:10:30.918 +02:00 [Information] Executed action "MyShop.Controllers.HomeController.Index (MyShop)" in 28.9287ms
+2023-09-04 16:10:30.918 +02:00 [Information] Executed endpoint '"MyShop.Controllers.HomeController.Index (MyShop)"'
+2023-09-04 16:10:30.919 +02:00 [Information] Request finished HTTP/1.1 GET https://localhost:7162/ - - - 200 - text/html;+charset=utf-8 50.1097ms
+2023-09-04 16:10:32.053 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:7162/Item/Table - -
+2023-09-04 16:10:32.058 +02:00 [Information] Executing endpoint '"MyShop.Controllers.ItemController.Table (MyShop)"'
+2023-09-04 16:10:32.064 +02:00 [Information] Route matched with "{action = \"Table\", controller = \"Item\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table()" on controller "MyShop.Controllers.ItemController" ("MyShop").
+2023-09-04 16:10:32.089 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"type\" = 'table' AND \"rootpage\" IS NOT NULL;"
+2023-09-04 16:10:32.114 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"i\".\"Id\", \"i\".\"Description\", \"i\".\"ImageUrl\", \"i\".\"Name\", \"i\".\"Price\"
+FROM \"Items\" AS \"i\""
+2023-09-04 16:10:32.121 +02:00 [Information] Executing ViewResult, running view "Table".
+2023-09-04 16:10:32.153 +02:00 [Information] Executed ViewResult - view "Table" executed in 32.7667ms.
+2023-09-04 16:10:32.153 +02:00 [Information] Executed action "MyShop.Controllers.ItemController.Table (MyShop)" in 88.5653ms
+2023-09-04 16:10:32.153 +02:00 [Information] Executed endpoint '"MyShop.Controllers.ItemController.Table (MyShop)"'
+2023-09-04 16:10:32.155 +02:00 [Information] Request finished HTTP/1.1 GET https://localhost:7162/Item/Table - - - 200 - text/html;+charset=utf-8 101.4797ms
+2023-09-04 16:10:38.824 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:7162/Item/Create - -
+2023-09-04 16:10:38.829 +02:00 [Information] Executing endpoint '"MyShop.Controllers.ItemController.Create (MyShop)"'
+2023-09-04 16:10:38.831 +02:00 [Information] Route matched with "{action = \"Create\", controller = \"Item\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Create()" on controller "MyShop.Controllers.ItemController" ("MyShop").
+2023-09-04 16:10:38.879 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"type\" = 'table' AND \"rootpage\" IS NOT NULL;"
+2023-09-04 16:10:38.881 +02:00 [Information] Executing ViewResult, running view "Create".
+2023-09-04 16:10:38.909 +02:00 [Information] Executed ViewResult - view "Create" executed in 29.2888ms.
+2023-09-04 16:10:38.909 +02:00 [Information] Executed action "MyShop.Controllers.ItemController.Create (MyShop)" in 77.6636ms
+2023-09-04 16:10:38.909 +02:00 [Information] Executed endpoint '"MyShop.Controllers.ItemController.Create (MyShop)"'
+2023-09-04 16:10:38.909 +02:00 [Information] Request finished HTTP/1.1 GET https://localhost:7162/Item/Create - - - 200 - text/html;+charset=utf-8 85.8906ms
+2023-09-04 16:10:52.611 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:7162/Item/Create application/x-www-form-urlencoded 225
+2023-09-04 16:10:52.612 +02:00 [Information] Executing endpoint '"MyShop.Controllers.ItemController.Create (MyShop)"'
+2023-09-04 16:10:52.629 +02:00 [Information] Route matched with "{action = \"Create\", controller = \"Item\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(MyShop.Models.Item)" on controller "MyShop.Controllers.ItemController" ("MyShop").
+2023-09-04 16:10:52.636 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"type\" = 'table' AND \"rootpage\" IS NOT NULL;"
+2023-09-04 16:10:52.660 +02:00 [Warning] [ItemController] Item creation failed Item { Id: 0, Name: "##", Price: 0, Description: null, ImageUrl: null, OrderItems: null }
+2023-09-04 16:10:52.661 +02:00 [Information] Executing ViewResult, running view "Create".
+2023-09-04 16:10:52.664 +02:00 [Information] Executed ViewResult - view "Create" executed in 3.3367ms.
+2023-09-04 16:10:52.664 +02:00 [Information] Executed action "MyShop.Controllers.ItemController.Create (MyShop)" in 34.185ms
+2023-09-04 16:10:52.664 +02:00 [Information] Executed endpoint '"MyShop.Controllers.ItemController.Create (MyShop)"'
+2023-09-04 16:10:52.664 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:7162/Item/Create application/x-www-form-urlencoded 225 - 200 - text/html;+charset=utf-8 53.0720ms

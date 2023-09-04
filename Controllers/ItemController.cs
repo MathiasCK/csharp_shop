@@ -1,24 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using MyShop.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using MyShop.DAL;
+using MyShop.Models;
 using MyShop.ViewModels;
-
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace MyShop.Controllers
 {
     public class ItemController : Controller
     {
-        
-        private readonly ItemRepository _itemRepository;
+
+        private readonly IItemRepository _itemRepository;
         private readonly ILogger<ItemController> _logger;
 
-        public ItemController(ItemRepository itemRepository, ILogger<ItemController> logger)
+        public ItemController(IItemRepository itemRepository, ILogger<ItemController> logger)
         {
             _itemRepository = itemRepository;
             _logger = logger;
