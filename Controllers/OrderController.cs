@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyShop.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using MyShop.ViewModels;
 
 namespace MyShop.Controllers
 {
@@ -24,9 +22,26 @@ namespace MyShop.Controllers
         }
 
         [HttpGet]
-        public IActionResult CreateOrderItem()
+        public async Task<IActionResult> CreateOrderItem()
         {
-            return View();
+            var items = await _itemDbContext.Items.ToListAsync();
+            var orders = await _itemDbContext.Orders.ToListAsync();
+            var createOrderItemViewModel = new CreateOrderItemViewModel
+            {
+                OrderItem = new OrderItem(),
+                ItemsSelectList = items.Select(item => new SelectListItem
+                {
+                    Value = item.Id.ToString(),
+                    Text = item.Id.ToString() + " : " + item.Name,
+                }).ToList(),
+                OrdersSelectList = orders.Select(order => new SelectListItem
+                {
+                    Value = order.Id.ToString(),
+                    Text = "Order: " + order.Id.ToString() + ", Date: " + order.OrderDate + ", Customer: " + order.Customer.Name,
+                }).ToList()
+            };
+
+            return View(createOrderItemViewModel);
         }
 
         [HttpPost]
