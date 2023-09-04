@@ -18,6 +18,7 @@
     <None Remove="ViewModels\" />
     <None Remove="Views\Customer\" />
     <None Remove="Views\Order\" />
+    <None Remove="DAL\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -30,6 +31,7 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Views\Customer\" />
     <Folder Include="Views\Order\" />
+    <Folder Include="DAL\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

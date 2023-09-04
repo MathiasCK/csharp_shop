@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyShop.Models;
+using MyShop.DAL;
 using MyShop.ViewModels;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,21 +14,22 @@ namespace MyShop.Controllers
 {
     public class ItemController : Controller
     {
-        private readonly ItemDbContext _itemDbContext;
+        
+        private readonly ItemRepository _itemRepository;
 
-        public ItemController(ItemDbContext itemDbContext)
+        public ItemController(ItemRepository itemRepository)
         {
-            _itemDbContext = itemDbContext;
+            _itemRepository = itemRepository;
         }
 
         public List<Order> OrderConsole()
         {
-            return _itemDbContext.Orders.ToList();
+            return _itemRepository.OrderConsole();
         }
 
         public async Task<IActionResult> Grid()
         {
-            var items = await _itemDbContext.Items.ToListAsync();
+            var items = await _itemRepository.GetAll();
             var itemListViewModel = new ItemListViewModel(items, "Grid");
 
             return View(itemListViewModel);
@@ -36,7 +38,7 @@ namespace MyShop.Controllers
 
         public async Task<IActionResult> Table()
         {
-            var items = await _itemDbContext.Items.ToListAsync();
+            var items = await _itemRepository.GetAll();
             var itemListViewModel = new ItemListViewModel(items, "Items");
 
             return View(itemListViewModel);
@@ -44,7 +46,7 @@ namespace MyShop.Controllers
 
         public async Task<IActionResult> Details(int id)
         {
-            var item = await _itemDbContext.Items.FirstOrDefaultAsync(i => i.Id == id);
+            var item = await _itemRepository.GetItemById(id);
 
             if (item == null)
             {
@@ -64,8 +66,7 @@ namespace MyShop.Controllers
         {
             if (ModelState.IsValid)
             {
-                _itemDbContext.Add(item);
-                await _itemDbContext.SaveChangesAsync();
+                await _itemRepository.Create(item);
                 return RedirectToAction(nameof(Table));
             }
             return View(item);
@@ -74,7 +75,7 @@ namespace MyShop.Controllers
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
-            var item = await _itemDbContext.Items.FindAsync(id);
+            var item = await _itemRepository.GetItemById(id);
             if (item == null)
             {
                 return NotFound();
@@ -87,8 +88,7 @@ namespace MyShop.Controllers
         {
             if (ModelState.IsValid)
             {
-                _itemDbContext.Items.Update(item);
-                await _itemDbContext.SaveChangesAsync();
+                await _itemRepository.Update(item);
                 return RedirectToAction(nameof(Table));
             }
             return View(item);
@@ -97,7 +97,7 @@ namespace MyShop.Controllers
         [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
-            var item = await _itemDbContext.Items.FindAsync(id);
+            var item = await _itemRepository.GetItemById(id);
 
             if (item == null)
             {
@@ -110,15 +110,7 @@ namespace MyShop.Controllers
         [HttpPost]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var item = await _itemDbContext.Items.FindAsync(id);
-
-            if (item == null)
-            {
-                return NotFound();
-            }
-
-            _itemDbContext.Remove(item);
-            await _itemDbContext.SaveChangesAsync();
+            await _itemRepository.Delete(id);
             return RedirectToAction(nameof(Table));
             
         }

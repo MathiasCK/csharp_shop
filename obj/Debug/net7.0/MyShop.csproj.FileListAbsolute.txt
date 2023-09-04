@@ -1,3 +1,11 @@
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.csproj.AssemblyReference.cache
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.AssemblyInfoInputs.cache
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.AssemblyInfo.cs
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.csproj.CoreCompileInputs.cache
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.MvcApplicationPartsAssemblyInfo.cache
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.RazorAssemblyInfo.cache
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.RazorAssemblyInfo.cs
 /Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/bin/Debug/net7.0/appsettings.Development.json
 /Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/bin/Debug/net7.0/appsettings.json
 /Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/bin/Debug/net7.0/libman.json
@@ -49,14 +57,6 @@
 /Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/bin/Debug/net7.0/runtimes/win-arm64/native/e_sqlite3.dll
 /Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/bin/Debug/net7.0/runtimes/win-x64/native/e_sqlite3.dll
 /Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/bin/Debug/net7.0/runtimes/win-x86/native/e_sqlite3.dll
-/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.csproj.AssemblyReference.cache
-/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.GeneratedMSBuildEditorConfig.editorconfig
-/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.AssemblyInfoInputs.cache
-/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.AssemblyInfo.cs
-/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.csproj.CoreCompileInputs.cache
-/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.MvcApplicationPartsAssemblyInfo.cache
-/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.RazorAssemblyInfo.cache
-/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.RazorAssemblyInfo.cs
 /Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/staticwebassets/msbuild.MyShop.Microsoft.AspNetCore.StaticWebAssets.props
 /Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/staticwebassets/msbuild.build.MyShop.props
 /Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.MyShop.props
