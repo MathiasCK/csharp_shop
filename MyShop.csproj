@@ -16,6 +16,8 @@
     <None Remove="Views\Home\" />
     <None Remove="Views\Shared\" />
     <None Remove="ViewModels\" />
+    <None Remove="Views\Customer\" />
+    <None Remove="Views\Order\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -26,6 +28,8 @@
     <Folder Include="Views\Shared\" />
     <Folder Include="wwwroot\" />
     <Folder Include="ViewModels\" />
+    <Folder Include="Views\Customer\" />
+    <Folder Include="Views\Order\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
