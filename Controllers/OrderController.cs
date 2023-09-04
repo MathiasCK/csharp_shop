@@ -22,6 +22,45 @@ namespace MyShop.Controllers
             List<Order> orders = await _itemDbContext.Orders.ToListAsync();
             return View(orders);
         }
+
+        [HttpGet]
+        public IActionResult CreateOrderItem()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateOrderItem(OrderItem orderItem)
+        {
+            try
+            {
+                var newItem = _itemDbContext.Items.Find(orderItem.ItemId);
+                var newOrder = _itemDbContext.Orders.Find(orderItem.OrderId);
+
+                if (newItem == null || newOrder == null)
+                {
+                    return BadRequest("Item or order not found");
+                }
+
+                var newOrderItem = new OrderItem
+                {
+                    ItemId = orderItem.ItemId,
+                    Item = newItem,
+                    Quantity = orderItem.Quantity,
+                    OrderId = orderItem.OrderId,
+                    Order = newOrder,
+                };
+
+                newOrderItem.OrderItemPrice = orderItem.Quantity * newOrderItem.Item.Price;
+
+                _itemDbContext.OrderItems.Add(newOrderItem);
+                await _itemDbContext.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            } catch
+            {
+                return BadRequest("Could not create OrderItem");
+            };
+        }
     }
 }
 
