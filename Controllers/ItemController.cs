@@ -16,10 +16,12 @@ namespace MyShop.Controllers
     {
         
         private readonly ItemRepository _itemRepository;
+        private readonly ILogger<ItemController> _logger;
 
-        public ItemController(ItemRepository itemRepository)
+        public ItemController(ItemRepository itemRepository, ILogger<ItemController> logger)
         {
             _itemRepository = itemRepository;
+            _logger = logger;
         }
 
         public List<Order> OrderConsole()

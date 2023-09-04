@@ -18,6 +18,8 @@ builder.Services.AddDbContext<ItemDbContext>(options => {
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
 
 var loggerConfig = new LoggerConfiguration().MinimumLevel.Information().WriteTo.File($"logs/app_{DateTime.Now:yyyyMMdd_HHmmss}.log");
+loggerConfig.Filter.ByExcluding(e => e.Properties.TryGetValue("SourceContext", out var value) && e.Level == Serilog.Events.LogEventLevel.Information && e.MessageTemplate.Text.Contains("Exectuted DbCommand"));
+
 var logger = loggerConfig.CreateLogger();
 builder.Logging.AddSerilog(logger);
 
