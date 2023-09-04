@@ -107,9 +107,9 @@ namespace MyShop.Models
             };
                 foreach (var orderItem in orderItems)
 				{
-					var item = context.Items.Find(orderItem.Id);
-					orderItem.OrderItemPrice = orderItem.Quantity * item?.Price ?? 0;
-				}
+					var item = context.Items.Find(orderItem.ItemId);
+                    orderItem.OrderItemPrice = orderItem.Quantity * item?.Price ?? 0;
+                }
                 context.AddRange(orderItems);
                 context.SaveChanges();
             }
