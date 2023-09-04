@@ -63,3 +63,7 @@
 /Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.pdb
 /Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/MyShop.genruntimeconfig.cache
 /Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/obj/Debug/net7.0/ref/MyShop.dll
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/bin/Debug/net7.0/Humanizer.dll
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/bin/Debug/net7.0/Mono.TextTemplating.dll
+/Users/mathiaskolberg/Library/Mobile Documents/com~apple~CloudDocs/OsloMet/3. År/Høst/Webapplikasjoner/2_MVC/MyShop/bin/Debug/net7.0/System.CodeDom.dll

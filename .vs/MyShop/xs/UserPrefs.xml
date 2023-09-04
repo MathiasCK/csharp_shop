@@ -1,36 +1,38 @@
 ﻿<Properties StartupConfiguration="{356E2A20-0C64-4031-BC11-77F6AFD2B2A5}|https">
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.MyShop PreferredExecutionTarget="/Applications/Arc.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Item/Grid.cshtml">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/ItemDbContext.cs">
     <Files>
-      <File FileName="Views/Item/Grid.cshtml" Line="11" Column="7" />
-      <File FileName="Views/Item/Table.cshtml" />
-      <File FileName="Views/Home/index.cshtml" />
-      <File FileName="Models/ItemDbContext.cs" />
-      <File FileName="Controllers/ItemController.cs" />
-      <File FileName="Program.cs" Line="26" Column="1" />
-      <File FileName="appsettings.json" />
-      <File FileName="Models/Item.cs" />
+      <File FileName="Views/Shared/_ItemCard_Table.cshtml" Line="16" Column="1" />
+      <File FileName="Controllers/ItemController.cs" Line="106" Column="1" />
+      <File FileName="Views/Item/Update.cshtml" Line="11" Column="11" />
+      <File FileName="Views/Item/Delete.cshtml" Line="26" Column="78" />
+      <File FileName="Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="Models/ItemDbContext.cs" Line="16" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MyShop">
             <Node name="MyShop">
-              <Node name="Views" expanded="True">
-                <Node name="Item" expanded="True">
-                  <Node name="Grid.cshtml" selected="True" />
-                </Node>
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Models">
+                <Node name="ItemDbContext.cs" selected="True" />
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
 </Properties>
