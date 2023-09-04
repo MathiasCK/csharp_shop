@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MyShop.Models;
 using MyShop.ViewModels;
 
@@ -19,38 +20,32 @@ namespace MyShop.Controllers
             _itemDbContext = itemDbContext;
         }
 
-        public IActionResult Grid()
+        public async Task<IActionResult> Grid()
         {
-            var items = GetItems();
+            var items = await _itemDbContext.Items.ToListAsync();
             var itemListViewModel = new ItemListViewModel(items, "Grid");
 
             return View(itemListViewModel);
         }
 
 
-        public IActionResult Table()
+        public async Task<IActionResult> Table()
         {
-            var items = GetItems();
+            var items = await _itemDbContext.Items.ToListAsync();
             var itemListViewModel = new ItemListViewModel(items, "Items");
 
             return View(itemListViewModel);
         }
 
-        public IActionResult Details(int id)
+        public async Task<IActionResult> Details(int id)
         {
-            var items = GetItems();
-            var item = items.FirstOrDefault(i => i.Id == id);
+            var item = await _itemDbContext.Items.FirstOrDefaultAsync(i => i.Id == id);
 
             if (item == null)
             {
                 return NotFound();
             }
             return View(item);
-        }
-
-        public List<Item> GetItems()
-        {
-            return _itemDbContext.Items.ToList();
         }
 
         [HttpGet]
@@ -58,21 +53,23 @@ namespace MyShop.Controllers
         {
             return View();
         }
+
         [HttpPost]
-        public IActionResult Create(Item item)
+        public async Task<IActionResult> Create(Item item)
         {
             if (ModelState.IsValid)
             {
                 _itemDbContext.Add(item);
-                _itemDbContext.SaveChanges();
+                await _itemDbContext.SaveChangesAsync();
                 return RedirectToAction(nameof(Table));
             }
             return View(item);
         }
+
         [HttpGet]
-        public IActionResult Update(int id)
+        public async Task<IActionResult> Update(int id)
         {
-            var item = _itemDbContext.Items.Find(id);
+            var item = await _itemDbContext.Items.FindAsync(id);
             if (item == null)
             {
                 return NotFound();
@@ -81,20 +78,21 @@ namespace MyShop.Controllers
         }
 
         [HttpPost]
-        public IActionResult Update(Item item)
+        public async Task<IActionResult> Update(Item item)
         {
             if (ModelState.IsValid)
             {
                 _itemDbContext.Items.Update(item);
-                _itemDbContext.SaveChanges();
+                await _itemDbContext.SaveChangesAsync();
                 return RedirectToAction(nameof(Table));
             }
             return View(item);
         }
+
         [HttpGet]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var item = _itemDbContext.Items.Find(id);
+            var item = await _itemDbContext.Items.FindAsync(id);
 
             if (item == null)
             {
@@ -103,10 +101,11 @@ namespace MyShop.Controllers
 
             return View(item);
         }
+
         [HttpPost]
-        public IActionResult DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var item = _itemDbContext.Items.Find(id);
+            var item = await _itemDbContext.Items.FindAsync(id);
 
             if (item == null)
             {
@@ -114,7 +113,7 @@ namespace MyShop.Controllers
             }
 
             _itemDbContext.Remove(item);
-            _itemDbContext.SaveChanges();
+            await _itemDbContext.SaveChangesAsync();
             return RedirectToAction(nameof(Table));
             
         }
